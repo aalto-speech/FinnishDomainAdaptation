@@ -6,5 +6,9 @@ To start with, data from Tedlium is used for a preliminary round of experiments.
 Running the recipe gave results as : 8.2% for test set and 9.4 for dev set. This result is a 0.1% offset with the original recipe. 
 
 
-## Finnish corpus - 
-The training data conatins data from Speecon database as well as data from Finnish Parliament corpus. These combined are about 2000 hours of training data. For validation and testing Yle dataset is used which is about <x> hours. 
+## Finnish corpus 
+The training data conatins data from Speecon database as well as data from Finnish Parliament corpus. These combined are about 2000 hours of training data. For validation and testing Yle dataset is used which is about 10 hours. 
+
+### Baseline Model for Finnish corpus
+Including a LM, gives marginally better results. 
+
