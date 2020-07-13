@@ -12,5 +12,11 @@ It is an extension of the ESPnet repository. Refer to ESPnet directory structure
 ## Running scripts
 './run.sh' is the main script for running your experiments. You can modify the parameters directly within the script or pass them as command line arguments. 
 
+
 ## Performing Transfer Learning
 The training configurations files need to be modified. Refer to the documentation - https://github.com/b-flo/espnet/blob/e972141b2110f4054f5046d73602089b39589a5c/doc/tutorial.md#how-to-use-finetuning
+
+
+## Transfer Learning Experiments
+Source model is trained on Parliament data, target model is dspcon data. Split the data into utterances so that the max frames per utterance is not more than 10K. 
+With adapted model, WER is 48.1%. 
