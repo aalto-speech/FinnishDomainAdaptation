@@ -1,9 +1,12 @@
 #from ../../../tools/env.sh:
 module load cuda/10.0.130
 module load cudnn/7.4.2-cuda
+module load sctk
+module load sox
 module load gcc/6.5.0
-export GCC_VERSION=6.5.0
 #module load cmake
+export GCC_VERSION=6.5.0
+#NCCL for multiple gpu use
 NCCL_ROOT=/scratch/work/choudhs1/miniconda/envs/espnet_torch_11_cuda_10
 export CPATH=$NCCL_ROOT/include:$CPATH
 export LD_LIBRARY_PATH=$NCCL_ROOT/lib/:$LD_LIBRARY_PATH
@@ -12,11 +15,6 @@ export CFLAGS="-I$CUDA_ROOT/include $CFLAGS"
 export CUDA_HOME=$CUDA_ROOT
 export CUDA_PATH=$CUDA_ROOT
 
-#additional modules:
-# module load sph2pipe
-# module load irstlm
-module load sctk
-module load sox
 
 export IRSTLM=/scratch/elec/puhe/Modules/opt/kaldi-vanilla/kaldi-7637de7-6.4.0-2.28/tools/irstlm
 export PATH=${PATH}:${IRSTLM}/bin
