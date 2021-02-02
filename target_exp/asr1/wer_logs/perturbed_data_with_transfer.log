@@ -1,0 +1,21 @@
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 4: Network Training
+Training done
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 5: Decoding using a char based, lm weight 0.5 ctc weight 0.3, TL for full model 
+average over ['exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.4', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.5', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.6', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.7', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.8', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.9', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.10', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.11', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.12', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.13']
+Decode started
+Decode started
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/decode_test_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.txt
+|     SPKR                 |     # Snt            # Wrd      |     Corr             Sub             Del              Ins             Err           S.Err      |
+|     Sum/Avg              |      541             38038      |     87.0             5.2             7.7              3.3            16.2            93.9      |
+write a WER result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/decode_test_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.wrd.txt
+|      SPKR                 |      # Snt          # Wrd      |      Corr              Sub              Del             Ins              Err            S.Err      |
+|      Sum/Avg              |       541            6344      |      59.4             32.9              7.7             4.5             45.1             93.0      |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/decode_dev_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.txt
+|      SPKR            |     # Snt            # Wrd      |      Corr             Sub              Del              Ins             Err            S.Err      |
+|      Sum/Avg         |      989            105572      |      87.6             5.0              7.5              3.6            16.1             97.0      |
+write a WER result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_transformer_24l_no_preprocess/decode_dev_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.wrd.txt
+|      SPKR            |      # Snt           # Wrd       |      Corr              Sub              Del              Ins               Err            S.Err      |
+|      Sum/Avg         |       989            17470       |      60.1             32.7              7.1              4.8              44.7             96.5      |
+Finished

@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_8layer_transfer_dev.trn
+hypothesis_data/dspcon_8layer_transfer_dev.trn
+data/dev
+refs data/dev/normalized.trn
+params hypothesis_data/dspcon_8layer_transfer_dev.trn
+dspcon_8layer_transfer_dev
+      | Sum/Avg|  988   17265 | 59.1   32.9    8.1    8.5   49.5   95.4 |

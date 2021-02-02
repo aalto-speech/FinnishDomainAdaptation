@@ -1,0 +1,7 @@
+dspcon_4layer_transfer_test.trn
+dspcon_4layer_transfer_test.trn
+data/test
+refs data/test/normalized.trn
+params dspcon_4layer_transfer_test.trn
+dspcon_4layer_transfer_test
+      | Sum/Avg|  541    6344 | 56.3   34.7    9.0    5.7   49.4   93.2 |

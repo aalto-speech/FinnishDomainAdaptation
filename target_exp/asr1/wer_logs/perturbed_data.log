@@ -1,0 +1,107 @@
+stage 0: Data preparation
+NOTE: You should have the basic data directories from the normal run.sh already
+utils/copy_data_dir.sh: copied data from data/conv-fin-sanasto_train_org to data/conv-fin-sanasto_train_org_perturbed
+utils/validate_data_dir.sh: Successfully validated data-directory data/conv-fin-sanasto_train_org_perturbed
+utils/copy_data_dir.sh: copied data from data/dev to data/dev_perturbed
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_perturbed
+utils/copy_data_dir.sh: copied data from data/test to data/test_perturbed
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_perturbed
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd slurm.pl --nj 10 --write_utt2num_frames true data/conv-fin-sanasto_train_org_perturbed exp/make_fbank/conv-fin-sanasto_train_org_perturbed fbank
+steps/make_fbank_pitch.sh: moving data/conv-fin-sanasto_train_org_perturbed/feats.scp to data/conv-fin-sanasto_train_org_perturbed/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/conv-fin-sanasto_train_org_perturbed
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for conv-fin-sanasto_train_org_perturbed
+fix_data_dir.sh: kept all 15966 utterances.
+fix_data_dir.sh: old files are kept in data/conv-fin-sanasto_train_org_perturbed/.backup
+Features for training done
+steps/make_fbank_pitch.sh --cmd slurm.pl --nj 4 --write_utt2num_frames true data/dev_perturbed exp/make_fbank/dev_perturbed fbank
+steps/make_fbank_pitch.sh: moving data/dev_perturbed/feats.scp to data/dev_perturbed/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_perturbed
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for dev_perturbed
+fix_data_dir.sh: kept all 989 utterances.
+fix_data_dir.sh: old files are kept in data/dev_perturbed/.backup
+steps/make_fbank_pitch.sh --cmd slurm.pl --nj 4 --write_utt2num_frames true data/test_perturbed exp/make_fbank/test_perturbed fbank
+steps/make_fbank_pitch.sh: moving data/test_perturbed/feats.scp to data/test_perturbed/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_perturbed
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for test_perturbed
+fix_data_dir.sh: kept all 541 utterances.
+fix_data_dir.sh: old files are kept in data/test_perturbed/.backup
+Features for dev and test done
+utils/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/conv-fin-sanasto_train_org, in data/temp1
+utils/validate_data_dir.sh: Successfully validated data-directory data/temp1
+utils/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/conv-fin-sanasto_train_org, in data/temp2
+utils/validate_data_dir.sh: Successfully validated data-directory data/temp2
+utils/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/conv-fin-sanasto_train_org, in data/temp3
+utils/validate_data_dir.sh: Successfully validated data-directory data/temp3
+utils/combine_data.sh --extra-files utt2uniq data/conv-fin-sanasto_train_org_perturbed data/temp1 data/temp2 data/temp3
+utils/combine_data.sh: combined utt2uniq
+utils/combine_data.sh [info]: not combining segments as it does not exist
+utils/combine_data.sh: combined utt2spk
+utils/combine_data.sh [info]: not combining utt2lang as it does not exist
+utils/combine_data.sh: combined utt2dur
+utils/combine_data.sh [info]: not combining utt2num_frames as it does not exist
+utils/combine_data.sh: combined reco2dur
+utils/combine_data.sh [info]: not combining feats.scp as it does not exist
+utils/combine_data.sh: combined text
+utils/combine_data.sh [info]: not combining cmvn.scp as it does not exist
+utils/combine_data.sh [info]: not combining vad.scp as it does not exist
+utils/combine_data.sh [info]: not combining reco2file_and_channel as it does not exist
+utils/combine_data.sh: combined wav.scp
+utils/combine_data.sh [info]: not combining spk2gender as it does not exist
+fix_data_dir.sh: kept all 47898 utterances.
+fix_data_dir.sh: old files are kept in data/conv-fin-sanasto_train_org_perturbed/.backup
+steps/make_fbank_pitch.sh --cmd slurm.pl --nj 32 --write_utt2num_frames true data/conv-fin-sanasto_train_org_perturbed exp/make_fbank/conv-fin-sanasto_train_org_perturbed fbank
+utils/validate_data_dir.sh: Successfully validated data-directory data/conv-fin-sanasto_train_org_perturbed
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for conv-fin-sanasto_train_org_perturbed
+fix_data_dir.sh: kept all 47898 utterances.
+fix_data_dir.sh: old files are kept in data/conv-fin-sanasto_train_org_perturbed/.backup
+speed perturbation done
+Dumping features started for train
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/../../../utils/dump.sh --cmd slurm.pl --nj 10 --do_delta false data/conv-fin-sanasto_train_org_perturbed/feats.scp data/conv-fin-sanasto_train_org_perturbed/cmvn.ark exp/dump_feats/train dump/conv-fin-sanasto_train_org_perturbed/deltafalse
+Dumping features started for dev and test
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/../../../utils/dump.sh --cmd slurm.pl --nj 4 --do_delta false data/dev_perturbed/feats.scp data/conv-fin-sanasto_train_org_perturbed/cmvn.ark exp/dump_feats/recog/dev_perturbed dump/dev_perturbed/deltafalse
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/../../../utils/dump.sh --cmd slurm.pl --nj 4 --do_delta false data/test_perturbed/feats.scp data/conv-fin-sanasto_train_org_perturbed/cmvn.ark exp/dump_feats/recog/test_perturbed dump/test_perturbed/deltafalse
+feature dumps done
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 2: Dictionary and Json Data Preparation
+[laugh]
+[reject]
+36 data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+JSON files done
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 3: LM Preparation
+LM training begins
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 3: LM Preparation
+LM training begins
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 4: Network Training
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 4: Network Training
+Training done
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 5: Decoding using a char based, lm weight 0.5 ctc weight 0.3, TL for full model 
+average over ['exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.15', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.16', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.17', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.18', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.19', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.20', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.21', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.22', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.23', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.24']
+Decode started
+Decode started
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/decode_test_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.txt
+|     SPKR                |     # Snt           # Wrd     |     Corr             Sub            Del             Ins            Err           S.Err     |
+|     Sum/Avg             |      541            38038     |     79.9             6.7           13.4             3.8           23.9            96.3     |
+write a WER result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/decode_test_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.wrd.txt
+|     SPKR                 |     # Snt          # Wrd      |     Corr             Sub             Del             Ins             Err           S.Err      |
+|     Sum/Avg              |      541            6344      |     47.4            41.2            11.5             5.6            58.3            95.4      |
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_perturbed_units.txt
+stage 5: Decoding using a char based, lm weight 0.5 ctc weight 0.3, TL for full model 
+average over ['exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.15', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.16', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.17', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.18', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.19', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.20', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.21', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.22', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.23', 'exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/results/snapshot.ep.24']
+Decode started
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/decode_dev_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.txt
+|     SPKR            |     # Snt           # Wrd      |     Corr             Sub            Del             Ins             Err           S.Err      |
+|     Sum/Avg         |      989           105572      |     79.5             7.0           13.6             4.6            25.1            98.4      |
+write a WER result in exp/conv-fin-sanasto_train_org_perturbed_pytorch_train_adam_opt_no_preprocess/decode_dev_perturbed_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.wrd.txt
+|     SPKR            |      # Snt          # Wrd      |      Corr             Sub              Del             Ins              Err           S.Err      |
+|     Sum/Avg         |       989           17470      |      48.1            41.2             10.7             6.9             58.9            98.1      |
+Finished

@@ -1,0 +1,14 @@
+hypothesis_data/dspcon_fulltransfer_charlm_24l_test.trn
+hypothesis_data/dspcon_fulltransfer_charlm_24l_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_fulltransfer_charlm_24l_test.trn
+dspcon_fulltransfer_charlm_24l_test
+      | Sum/Avg|  541    6339 | 71.2   22.5    6.3    4.0   32.8   83.7 |
+hypothesis_data/dspcon_fulltransfer_charlm_24l_test.trn
+hypothesis_data/dspcon_fulltransfer_charlm_24l_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_fulltransfer_charlm_24l_test.trn
+dspcon_fulltransfer_charlm_24l_test
+      | Sum/Avg|  541    6339 | 71.2   22.5    6.3    4.0   32.8   83.7 |

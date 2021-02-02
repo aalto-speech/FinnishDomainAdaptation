@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_dev.trn
+hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_dev.trn
+data/dev
+refs data/dev/normalized.trn
+params hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_dev.trn
+dspcon_speed_perturbed_noadaptation_charlm_dev
+      | Sum/Avg|  989   17266 | 56.3   33.6   10.1    7.5   51.3   96.9 |

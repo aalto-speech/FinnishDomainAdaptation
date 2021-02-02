@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_speed_perturbed_fulltransfer_charlm_test.trn
+hypothesis_data/dspcon_speed_perturbed_fulltransfer_charlm_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_speed_perturbed_fulltransfer_charlm_test.trn
+dspcon_speed_perturbed_fulltransfer_charlm_test
+      | Sum/Avg|  541    6324 | 68.5   24.4    7.1    4.3   35.8   87.2 |

@@ -1,0 +1,12 @@
+dspcon_fulltransfer_dev.trn
+dspcon_fulltransfer_dev.trn
+data/dev
+refs data/dev/normalized.trn
+params dspcon_fulltransfer_dev.trn
+dspcon_fulltransfer_dev
+      | Sum/Avg|  989   17297  | 65.2   27.8    7.1    5.6   40.5   95.4 |
+
+
+#command to remove the extra part from utterance - sed "s/([^)]*-/(/g" -i dspcon_fulltransfer_test.trn
+
+# command to remove leading white space - sed -e 's/^[ \t]*//' -i dspcon_4layer_transfer_dev.trn

@@ -1,0 +1,38 @@
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 4: Network Training
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 4: Network Training
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 4: Network Training
+Training done
+stage 8: Model parameters
+exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/model.acc.best
+Trainable parameters:  35605068
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a LM unit 650, lm weight 0.5 ctc weight 0.3, TL for freezing first 4 layers encoder, decoder all transferred 
+average over ['exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.35', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.36', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.37', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.38', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.39', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.40', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.41', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.42', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.43', 'exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/snapshot.ep.44']
+Decode startes
+Decode startes
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/decode_test_decode_lm_unit_650/result.txt
+|   SPKR              |   # Snt      # Wrd    |   Corr        Sub        Del        Ins         Err      S.Err   |
+|   Sum/Avg           |    541       38038    |   80.7        7.2       12.1        4.1        23.4       95.7   |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/decode_test_decode_lm_unit_650/result.wrd.txt
+|   SPKR               |   # Snt      # Wrd   |   Corr         Sub         Del         Ins        Err       S.Err    |
+|   Sum/Avg            |    541        6344   |   48.1        42.7         9.2         5.9       57.8        95.6    |
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a LM unit 650, lm weight 0.5 ctc weight 0.3, TL for freezing first 4 layers encoder, decoder all transferred 
+Decode startes
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/decode_dev_decode_lm_unit_650/result.txt
+|   SPKR          |   # Snt      # Wrd    |   Corr         Sub        Del         Ins         Err      S.Err    |
+|   Sum/Avg       |    989      105572    |   79.5         7.9       12.6         5.0        25.5       97.7    |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/decode_dev_decode_lm_unit_650/result.wrd.txt
+|   SPKR          |   # Snt       # Wrd    |   Corr         Sub         Del          Ins         Err       S.Err    |
+|   Sum/Avg       |    989        17470    |   48.2        42.2         9.7          7.3        59.1        97.5    |
+Finished
+stage 8: Model parameters
+exp/conv-fin-sanasto_train_org_pytorch_train_freeze_layer_4_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35605068
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch/rnnlm.model.best
+Trainable parameters:  6819838
+Length vocabulary:  38

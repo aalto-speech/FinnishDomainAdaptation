@@ -1,0 +1,25 @@
+stage 5: Decoding using a LM 
+average over ['exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.14', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.15', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.16', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.17', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.18', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.19', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.20', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.21', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.22', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/results/snapshot.ep.23']
+Decode startes
+Decode startes
+write a CER (or TER) result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/decode_test_decode_lm_unit_2048_lm0.5_ctc0.3/result.txt
+|   SPKR               |   # Snt        # Wrd    |   Corr         Sub         Del          Ins         Err       S.Err    |
+|   Sum/Avg            |    541         38038    |   85.8         5.2         9.0          3.3        17.5        94.1    |
+write a WER result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/decode_test_decode_lm_unit_2048_lm0.5_ctc0.3/result.wrd.txt
+|    SPKR               |    # Snt      # Wrd    |    Corr          Sub          Del         Ins          Err        S.Err    |
+|    Sum/Avg            |     541        6344    |    54.5         37.8          7.6         5.5         51.0         93.9    |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/decode_dev_decode_lm_unit_2048_lm0.5_ctc0.3/result.txt
+|    SPKR          |   # Snt        # Wrd    |    Corr         Sub          Del          Ins         Err        S.Err    |
+|    Sum/Avg       |    909         77444    |    85.7         5.5          8.8          3.5        17.9         97.9    |
+write a WER result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_filtered_1600/decode_dev_decode_lm_unit_2048_lm0.5_ctc0.3/result.wrd.txt
+|    SPKR          |    # Snt       # Wrd     |    Corr          Sub          Del          Ins           Err        S.Err    |
+|    Sum/Avg       |     909        12928     |    54.5         37.9          7.5          5.5          51.0         97.5    |
+Finished
+stage 8: Model parameters
+exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35605068
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch/rnnlm.model.best
+Trainable parameters:  6819838
+Length vocabulary:  38
+filetred 1600

@@ -1,0 +1,43 @@
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 3: LM Preparation
+LM training begins
+stage 4: Network Training
+Training done
+stage 8: Model parameters
+exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/model.acc.best
+Trainable parameters:  52440652
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch/rnnlm.model.best
+Trainable parameters:  6819838
+Length vocabulary:  38
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a word based, lm weight 0.5 ctc weight 0.3, TL for full model 
+average over ['exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.4', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.5', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.6', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.7', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.8', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.9', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.10', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.11', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.12', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.13']
+Decode started
+Decode started
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/./run.sh: 2 background jobs are failed.
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a char based, lm weight 0.5 ctc weight 0.3, TL for full model 
+average over ['exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.4', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.5', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.6', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.7', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.8', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.9', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.10', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.11', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.12', 'exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/snapshot.ep.13']
+Decode started
+Decode started
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/decode_test_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.txt
+|    SPKR                |    # Snt         # Wrd     |    Corr           Sub           Del           Ins           Err         S.Err     |
+|    Sum/Avg             |     541          38038     |    89.1           4.2           6.7           3.0          13.9          92.1     |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/decode_test_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.wrd.txt
+|     SPKR                |    # Snt         # Wrd     |    Corr            Sub           Del            Ins           Err          S.Err     |
+|     Sum/Avg             |     541           6344     |    61.9           31.5           6.7            4.3          42.5           91.3     |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/decode_dev_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.txt
+|    SPKR           |     # Snt         # Wrd     |     Corr           Sub            Del           Ins            Err         S.Err     |
+|    Sum/Avg        |      989         105572     |     89.7           3.8            6.5           3.3           13.6          95.4     |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/decode_dev_decode_beam_20_ctc3_lm5_lm_unit_650_charlm/result.wrd.txt
+|     SPKR           |     # Snt         # Wrd     |     Corr            Sub            Del            Ins            Err          S.Err     |
+|     Sum/Avg        |      989          17470     |     63.9           29.7            6.3            4.4           40.4           94.5     |
+Finished
+stage 8: Model parameters
+exp/conv-fin-sanasto_train_org_pytorch_train_transformer_24l_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  52440652
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch/rnnlm.model.best
+Trainable parameters:  6819838
+Length vocabulary:  38

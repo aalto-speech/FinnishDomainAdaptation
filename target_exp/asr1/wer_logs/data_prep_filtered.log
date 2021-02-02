@@ -1,0 +1,19 @@
+dictionary: data/lang_1char/conv-fin-sanasto_train_units.txt
+stage 5: Decoding using a LM 
+average over ['exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.15', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.16', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.17', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.18', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.19', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.20', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.21', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.22', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.23', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/snapshot.ep.24']
+write a CER (or TER) result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/decode_dev_decode_lm_unit_2048/result.txt
+|  SPKR         |  # Snt    # Wrd   |  Corr       Sub      Del       Ins       Err    S.Err   |
+|  Sum/Avg      |   850     64628   |  85.2       5.7      9.0       4.0      18.8     97.4   |
+write a WER result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/decode_dev_decode_lm_unit_2048/result.wrd.txt
+|  SPKR         |  # Snt     # Wrd   |  Corr       Sub       Del        Ins       Err     S.Err   |
+|  Sum/Avg      |   850      10803   |  52.8      38.5       8.7        5.1      52.3      96.9   |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/decode_test_decode_lm_unit_2048/result.txt
+|  SPKR             |  # Snt    # Wrd   |  Corr      Sub      Del      Ins       Err    S.Err  |
+|  Sum/Avg          |   541     38038   |  84.1      6.1      9.8      4.0      19.9     93.9  |
+write a WER result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/decode_test_decode_lm_unit_2048/result.wrd.txt
+|  SPKR              |  # Snt    # Wrd  |  Corr       Sub       Del       Ins      Err     S.Err   |
+|  Sum/Avg           |   541      6344  |  52.7      38.0       9.3       5.6     52.9      93.5   |
+Finished
+
+
+#Decode config was lm weight 0.3 , ctc as 0.1, beam as 20, filter frames 1400 + my trained model as teacher model

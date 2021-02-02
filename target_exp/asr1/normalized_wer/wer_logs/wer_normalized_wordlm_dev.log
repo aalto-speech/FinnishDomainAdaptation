@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_fulltransfer_wordlm_dev.trn
+hypothesis_data/dspcon_fulltransfer_wordlm_dev.trn
+data/dev
+refs data/dev/normalized.trn
+params hypothesis_data/dspcon_fulltransfer_wordlm_dev.trn
+dspcon_fulltransfer_wordlm_dev
+      | Sum/Avg|  989   17348  | 67.2   26.6    6.3    8.2   41.0   94.4 |

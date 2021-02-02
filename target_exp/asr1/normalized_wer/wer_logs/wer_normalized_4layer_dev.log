@@ -1,0 +1,7 @@
+dspcon_4layer_transfer_dev.trn
+dspcon_4layer_transfer_dev.trn
+data/dev
+refs data/dev/normalized.trn
+params dspcon_4layer_transfer_dev.trn
+dspcon_4layer_transfer_dev
+      | Sum/Avg|  989   17301  | 56.6   34.0    9.4    7.9   51.3   95.9 |

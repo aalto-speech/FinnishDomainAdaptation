@@ -1,0 +1,7 @@
+dspcon_fulltransfer_test.trn
+dspcon_fulltransfer_test.trn
+data/test
+refs data/test/normalized.trn
+params dspcon_fulltransfer_test.trn
+dspcon_fulltransfer_test
+      | Sum/Avg|  541    6336 | 64.5   28.0    7.5    4.7   40.2   87.2 |

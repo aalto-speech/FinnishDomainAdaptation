@@ -1,0 +1,93 @@
+exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/model.acc.best
+dictionary: data/lang_1char/conv-fin-sanasto_train_units.txt
+stage 5: Decoding using a LM 
+average over ['exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.28', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.29', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.30', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.31', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.32', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.33', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.34', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.35', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.36', 'exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/results/snapshot.ep.37']
+write a CER (or TER) result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/decode_test_decode_lm_unit_2048/result.txt
+|  SPKR              |  # Snt    # Wrd   |  Corr       Sub      Del       Ins       Err    S.Err   |
+|  Sum/Avg           |   541     38038   |  87.0       5.0      8.0       3.5      16.5     93.2   |
+write a WER result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/decode_test_decode_lm_unit_2048/result.wrd.txt
+|  SPKR              |  # Snt     # Wrd   |  Corr       Sub       Del        Ins       Err     S.Err   |
+|  Sum/Avg           |   541       6344   |  56.7      35.2       8.1        4.8      48.1      92.6   |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/decode_dev_decode_lm_unit_2048/result.txt
+|  SPKR         |  # Snt     # Wrd   |  Corr        Sub       Del       Ins       Err     S.Err   |
+|  Sum/Avg      |   989     105572   |  86.4        5.1       8.4       4.0      17.5      98.1   |
+write a WER result in exp/conv-fin-sanasto_train_pytorch_train_no_preprocess_10k/decode_dev_decode_lm_unit_2048/result.wrd.txt
+|   SPKR         |  # Snt     # Wrd   |   Corr       Sub        Del        Ins       Err      S.Err   |
+|   Sum/Avg      |   989      17470   |   56.4      35.1        8.6        5.1      48.7       97.1   |
+Finished
+stage 8: Model parameters
+exp/conv-fin-sanasto_train_pytorch_train_no_preprocess/results/model.last10.avg.best
+
+
+Corrected data after changing file. 
+Decode config : 
+batchsize: 0
+beam-size: 20
+penalty: 0.0
+maxlenratio: 0.0
+minlenratio: 0.0
+ctc-weight: 0.1
+lm-weight: 0.3
+
+LM config: 
+layer: 2         # 2 for character LMs def 1 
+unit: 650       # 650 for character LMs def 100
+opt: adam          # adam for character LMs default sgd
+sortagrad: 0 # Feed samples from shortest to longest ; -1: enabled for all epochs, 0: disabled, other: enabled for 'other' epochs
+batchsize: 600    # 1024 for character LMs def 300
+epoch: 20        # number of epochs
+patience: 3
+maxlen: 150        # 150 for character LMs
+dropout-rate: 0.0
+
+Train config:
+#transfer learning arch
+--enc-init: "exp/teachermodel/results/model.acc.best"
+--dec-init: "exp/teachermodel/results/model.acc.best"
+--enc-init-mods: "encoder."
+--dec-init-mods: "decoder."
+
+# network architecture
+# encoder related
+elayers: 16
+eunits: 2048
+# decoder related
+dlayers: 8
+dunits: 2048
+# attention related
+adim: 256
+aheads: 4
+
+# hybrid CTC/attention
+mtlalpha: 0.2
+
+# label smoothing
+lsm-weight: 0.1
+
+# minibatch related
+batch-size: 24
+maxlen-in: 512  # if input length  > maxlen-in, batchsize is automatically reduced
+maxlen-out: 150 # if output length > maxlen-out, batchsize is automatically reduced
+
+# optimization related
+sortagrad: 0 # Feed samples from shortest to longest ; -1: enabled for all epochs, 0: disabled, other: enabled for 'other' epochs
+opt: noam
+accum-grad: 2
+grad-clip: 5
+patience: 3
+epochs: 50
+dropout-rate: 0.1
+
+# transformer specific setting
+backend: pytorch
+model-module: "espnet.nets.pytorch_backend.e2e_asr_transformer:E2E"
+transformer-input-layer: conv2d     # encoder architecture type
+transformer-lr: 10.0
+transformer-warmup-steps: 25000
+transformer-attn-dropout-rate: 0.0
+transformer-length-normalized-loss: false
+transformer-init: pytorch
+
+# Report CER & WER
+report-cer: true
+report-wer: true

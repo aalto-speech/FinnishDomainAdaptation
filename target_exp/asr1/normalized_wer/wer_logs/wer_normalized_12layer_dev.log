@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_12layer_transfer_dev.trn
+hypothesis_data/dspcon_12layer_transfer_dev.trn
+data/dev
+refs data/dev/normalized.trn
+params hypothesis_data/dspcon_12layer_transfer_dev.trn
+dspcon_12layer_transfer_dev
+      | Sum/Avg|  989   17289 | 60.3   31.1    8.5    7.3   47.0   95.4 |

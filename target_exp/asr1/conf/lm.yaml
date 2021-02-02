@@ -1,0 +1,9 @@
+layer: 2         # 2 for character LMs def 1 
+unit: 650       # 650 for character LMs def 100
+opt: adam          # adam for character LMs default sgd
+sortagrad: 0 # Feed samples from shortest to longest ; -1: enabled for all epochs, 0: disabled, other: enabled for 'other' epochs
+batchsize: 1024    # 1024 for character LMs def 300
+epoch: 20        # number of epochs
+patience: 3
+maxlen: 150        # 150 for character LMs
+dropout-rate: 0.0

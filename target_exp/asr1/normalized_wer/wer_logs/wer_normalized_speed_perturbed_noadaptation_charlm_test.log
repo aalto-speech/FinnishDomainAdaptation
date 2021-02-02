@@ -1,0 +1,13 @@
+hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test
+hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test
+Hypothesis file does not exist: hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test
+hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test.trn
+hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_speed_perturbed_noadaptation_charlm_test.trn
+dspcon_speed_perturbed_noadaptation_charlm_test
+      | Sum/Avg|  541    6301 | 55.1   34.0   10.9    5.7   50.6   92.1 |

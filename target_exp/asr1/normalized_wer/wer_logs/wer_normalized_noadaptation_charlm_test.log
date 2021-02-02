@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_no_adapt_test.trn
+hypothesis_data/dspcon_no_adapt_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_no_adapt_test.trn
+dspcon_no_adapt_test
+      | Sum/Avg|  541    6285 | 39.3   48.1   12.6   11.8   72.5   96.3 |

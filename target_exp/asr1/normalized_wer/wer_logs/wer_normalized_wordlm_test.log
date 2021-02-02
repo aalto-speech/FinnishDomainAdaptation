@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_fulltransfer_wordlm_test.trn
+hypothesis_data/dspcon_fulltransfer_wordlm_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_fulltransfer_wordlm_test.trn
+dspcon_fulltransfer_wordlm_test
+      | Sum/Avg|  541    6370 | 66.1   27.3    6.7    6.8   40.8   89.6 |

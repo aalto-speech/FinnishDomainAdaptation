@@ -1,0 +1,7 @@
+hypothesis_data/dspcon_12layer_transfer_test.trn
+hypothesis_data/dspcon_12layer_transfer_test.trn
+data/test
+refs data/test/normalized.trn
+params hypothesis_data/dspcon_12layer_transfer_test.trn
+dspcon_12layer_transfer_test
+      | Sum/Avg|  541    6332 | 59.0   31.6    9.4    5.4   46.3   91.5 |

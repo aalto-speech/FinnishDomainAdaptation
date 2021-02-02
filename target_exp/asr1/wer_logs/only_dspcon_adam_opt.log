@@ -1,0 +1,22 @@
+#changed optimizer from noam to adam as used in Vaswani paper - Attention is all you Need
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 4: Network Training
+Training done
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a LM 
+average over ['exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.63', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.64', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.65', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.66', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.67', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.68', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.69', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.70', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.71', 'exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/results/snapshot.ep.72']
+Decode started
+Decode started
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/decode_test_decode_ctc3_lm3_lm_unit_2048/result.txt
+|    SPKR               |    # Snt        # Wrd     |    Corr          Sub          Del          Ins           Err        S.Err    |
+|    Sum/Avg            |     541         38038     |    66.7         13.6         19.6          7.4          40.6         97.2    |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/decode_test_decode_ctc3_lm3_lm_unit_2048/result.wrd.txt
+|    SPKR                |    # Snt        # Wrd    |    Corr           Sub           Del           Ins          Err         S.Err     |
+|    Sum/Avg             |     541          6344    |    32.8          54.0          13.1          11.4         78.6          97.0     |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/decode_dev_decode_ctc3_lm3_lm_unit_2048/result.txt
+|    SPKR           |    # Snt        # Wrd     |    Corr           Sub          Del           Ins           Err        S.Err     |
+|    Sum/Avg        |     989        105572     |    63.8          16.7         19.5           9.5          45.6         99.3     |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_adam_opt_no_preprocess_wo_adaptation/decode_dev_decode_ctc3_lm3_lm_unit_2048/result.wrd.txt
+|    SPKR           |    # Snt         # Wrd     |    Corr           Sub           Del            Ins           Err         S.Err     |
+|    Sum/Avg        |     989          17470     |    30.8          58.0          11.2           12.9          82.1          99.2     |
+Finished

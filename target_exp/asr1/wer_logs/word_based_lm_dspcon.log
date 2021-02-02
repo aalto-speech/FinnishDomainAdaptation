@@ -1,0 +1,67 @@
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 3: LM Preparation
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 3: LM Preparation
+LM training begins
+
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a word based, lm weight 0.5 ctc weight 0.3, TL for full model 
+Decode started
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/./run.sh: 1 background jobs are failed.
+dictionary: data/lang_1char/conv-fin-sanasto_train_org_units.txt
+stage 5: Decoding using a word based, lm weight 0.5 ctc weight 0.3, TL for full model 
+Decode started
+Decode started
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/./run.sh: 2 background jobs are failed.
+
+stage 1: Kaldi Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 10 --write_utt2num_frames true data/conv-fin-sanasto_train_org exp/make_fbank/conv-fin-sanasto_train_org fbank
+steps/make_fbank_pitch.sh: moving data/conv-fin-sanasto_train_org/feats.scp to data/conv-fin-sanasto_train_org/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/conv-fin-sanasto_train_org
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for conv-fin-sanasto_train_org
+fix_data_dir.sh: kept all 15966 utterances.
+fix_data_dir.sh: old files are kept in data/conv-fin-sanasto_train_org/.backup
+Features for training done
+steps/make_fbank_pitch.sh --cmd run.pl --nj 4 --write_utt2num_frames true data/dev exp/make_fbank/dev fbank
+steps/make_fbank_pitch.sh: moving data/dev/feats.scp to data/dev/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for dev
+fix_data_dir.sh: kept all 989 utterances.
+fix_data_dir.sh: old files are kept in data/dev/.backup
+steps/make_fbank_pitch.sh --cmd run.pl --nj 4 --write_utt2num_frames true data/test exp/make_fbank/test fbank
+steps/make_fbank_pitch.sh: moving data/test/feats.scp to data/test/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_fbank_pitch.sh: Succeeded creating filterbank and pitch features for test
+fix_data_dir.sh: kept all 541 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+Features for dev and test done
+Dumping features started for train
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/../../../utils/dump.sh --cmd run.pl --nj 10 --do_delta false data/conv-fin-sanasto_train_org/feats.scp data/conv-fin-sanasto_train_org/cmvn.ark exp/dump_feats/train dump/conv-fin-sanasto_train_org/deltafalse
+Dumping features started for dev and test
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/../../../utils/dump.sh --cmd run.pl --nj 4 --do_delta false data/dev/feats.scp data/conv-fin-sanasto_train_org/cmvn.ark exp/dump_feats/recog/dev dump/dev/deltafalse
+/scratch/work/choudhs1/espnet/egs/dsp_filtered/asr1/../../../utils/dump.sh --cmd run.pl --nj 4 --do_delta false data/test/feats.scp data/conv-fin-sanasto_train_org/cmvn.ark exp/dump_feats/recog/test dump/test/deltafalse
+feature dumps done
+stage 5: Decoding using a word based, lm weight 0.5 ctc weight 0.3, TL for full model 
+Decode started
+Decode started
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_no_preprocess/decode_test_decode_word_lm/result.txt
+|  SPKR             |  # Snt    # Wrd  |  Corr      Sub       Del      Ins      Err    S.Err  |
+|  Sum/Avg          |   541     38038  |  86.0      5.3       8.7      4.0     18.1     93.9  |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_no_preprocess/decode_test_decode_word_lm/result.wrd.txt
+|  SPKR              |  # Snt   # Wrd   |  Corr       Sub      Del       Ins       Err    S.Err   |
+|  Sum/Avg           |   541     6344   |  56.5      36.7      6.8       7.4      50.8     93.5   |
+write a CER (or TER) result in exp/conv-fin-sanasto_train_org_pytorch_train_no_preprocess/decode_dev_decode_word_lm/result.txt
+|  SPKR         |  # Snt    # Wrd   |  Corr      Sub       Del      Ins       Err    S.Err   |
+|  Sum/Avg      |   989    105572   |  86.1      5.3       8.6      4.3      18.2     98.0   |
+write a WER result in exp/conv-fin-sanasto_train_org_pytorch_train_no_preprocess/decode_dev_decode_word_lm/result.wrd.txt
+|  SPKR         |  # Snt    # Wrd   |  Corr        Sub       Del       Ins       Err     S.Err   |
+|  Sum/Avg      |   989     17470   |  57.1       36.3       6.6       7.8      50.8      97.4   |
+Finished
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_wordlm/rnnlm.model.best
+Trainable parameters:  76812385
+Length vocabulary:  34385
