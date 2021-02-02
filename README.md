@@ -18,5 +18,11 @@ The training configurations files need to be modified. Refer to the documentatio
 
 
 ## Transfer Learning Experiments
-Source model is trained on Parliament data, target model is dspcon data. Split the data into utterances so that the max frames per utterance is not more than 10K. 
-With adapted model, WER is 48.1%. 
+Source model is trained on Parliament data, target model is dspcon data.
+
+## LM Experiments
+External LM data of Kielipankki is used to train the LM along with the transcriptions of the Parliament data. 
+
+##Future Work
+Use webcon and webcon+dspcon transcriptions to train a LM.
+
