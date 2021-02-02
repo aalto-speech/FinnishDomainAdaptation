@@ -1,0 +1,23 @@
+dictionary: data/lang_1char/all_cleaned_units.txt
+Training done
+stage 5: Decoding with LM and pretrained model
+write a CER (or TER) result in exp/astrid_trained_model/decode_yle-dev-new_decode_lm/result.txt
+| SPKR                                          | # Snt  # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 2850  293409 | 95.7    2.2    2.0    2.3    6.5   77.9 |
+write a WER result in exp/astrid_trained_model/decode_yle-dev-new_decode_lm/result.wrd.txt
+| SPKR                                          | # Snt # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 2850  35070 | 78.7   18.3    3.1    4.7   26.0   75.1 |
+write a CER (or TER) result in exp/astrid_trained_model/decode_yle-test-new_decode_lm/result.txt
+| SPKR                                          | # Snt  # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 3006  303312 | 95.9    2.0    2.2    2.0    6.1   76.9 |
+write a WER result in exp/astrid_trained_model/decode_yle-test-new_decode_lm/result.wrd.txt
+| SPKR                                          | # Snt # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 3006  36869 | 79.4   17.3    3.4    4.1   24.8   74.0 |
+Finished
+stage 8: Model parameters
+exp/all_cleaned_pytorch_train_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35626628
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_lm/rnnlm.model.best
+Trainable parameters:  6856266
+Length vocabulary:  66

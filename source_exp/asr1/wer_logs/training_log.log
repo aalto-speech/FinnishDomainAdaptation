@@ -1,0 +1,23 @@
+dictionary: data/lang_1char/all_cleaned_units.txt
+stage 5: Decoding with LM
+average over ['exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.18', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.19', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.20', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.21', 'exp/all_cleaned_pytorch_train_no_preprocess/results/snapshot.ep.22']
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_no_preprocess/decode_yle-dev-new_decode_lm/result.txt
+| SPKR                                          | # Snt  # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 2850  293409 | 95.7    2.2    2.0    2.5    6.8   79.4 |
+write a WER result in exp/all_cleaned_pytorch_train_no_preprocess/decode_yle-dev-new_decode_lm/result.wrd.txt
+| SPKR                                          | # Snt # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 2850  35070 | 78.4   18.6    2.9    5.4   26.9   75.9 |
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_no_preprocess/decode_yle-test-new_decode_lm/result.txt
+| SPKR                                          | # Snt  # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 3006  303312 | 95.9    2.0    2.2    2.2    6.3   77.7 |
+write a WER result in exp/all_cleaned_pytorch_train_no_preprocess/decode_yle-test-new_decode_lm/result.wrd.txt
+| SPKR                                          | # Snt # Wrd | Corr    Sub    Del    Ins    Err  S.Err |
+| Sum/Avg                                       | 3006  36869 | 79.3   17.4    3.2    4.6   25.3   74.4 |
+Finished
+stage 8: Model parameters
+exp/all_cleaned_pytorch_train_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35626628
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_lm/rnnlm.model.best
+Trainable parameters:  6856266
+Length vocabulary:  66

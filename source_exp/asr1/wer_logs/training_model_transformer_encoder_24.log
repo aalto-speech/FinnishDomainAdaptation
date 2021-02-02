@@ -1,0 +1,23 @@
+
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.9', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.10', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/snapshot.ep.18']
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+|   SPKR                                            |   # Snt       # Wrd   |   Corr        Sub         Del        Ins        Err       S.Err   |
+|   Sum/Avg                                         |   2850       293409   |   96.2        1.8         1.9        2.0        5.8        73.0   |
+write a WER result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|   SPKR                                             |   # Snt      # Wrd    |   Corr         Sub        Del         Ins         Err       S.Err    |
+|   Sum/Avg                                          |   2850       35070    |   81.4        16.1        2.5         4.3        22.8        69.9    |
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+|   SPKR                                            |   # Snt       # Wrd   |   Corr         Sub        Del         Ins        Err       S.Err   |
+|   Sum/Avg                                         |   3006       303312   |   96.4         1.6        2.0         1.8        5.3        72.1   |
+write a WER result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|   SPKR                                             |   # Snt      # Wrd    |   Corr         Sub         Del         Ins         Err       S.Err    |
+|   Sum/Avg                                          |   3006       36869    |   82.2        15.1         2.7         3.6        21.4        69.0    |
+Finished
+stage 8: Model parameters
+exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/results/model.last10.avg.best
+Trainable parameters:  52462212
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_large_lm_2048/rnnlm.model.best
+Trainable parameters:  67412034
+Length vocabulary:  66

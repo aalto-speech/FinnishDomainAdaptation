@@ -1,0 +1,25 @@
+make a non-linguistic symbol list
+[fil]
+[int]
+[spk]
+make a dictionary
+64 data/lang_1char/kielipankki_lm.txt
+Done
+stage 3: LM Preparation
+stage 3: LM Preparation
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40 wiht 500k kielipankki sentences (split00 only)
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_kielipankki_lm/result.txt
+|   SPKR                                            |   # Snt      # Wrd   |   Corr        Sub         Del        Ins        Err      S.Err   |
+|   Sum/Avg                                         |   2850      293409   |   96.7        1.6         1.8        1.6        4.9       66.6   |
+write a WER result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_kielipankki_lm/result.wrd.txt
+|   SPKR                                             |   # Snt     # Wrd    |   Corr         Sub        Del         Ins         Err      S.Err    |
+|   Sum/Avg                                          |   2850      35070    |   84.5        13.3        2.3         3.3        18.8       63.5    |
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_kielipankki_lm/result.txt
+|   SPKR                                            |   # Snt      # Wrd    |   Corr        Sub        Del        Ins         Err      S.Err   |
+|   Sum/Avg                                         |   3006      303312    |   96.8        1.4        1.8        1.4         4.6       65.3   |
+write a WER result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_kielipankki_lm/result.wrd.txt
+|   SPKR                                             |   # Snt      # Wrd   |   Corr         Sub         Del         Ins        Err       S.Err    |
+|   Sum/Avg                                          |   3006       36869   |   85.2        12.3         2.6         2.8       17.6        62.2    |
+Finished
+
+Parl + kieli 500K lines (1.63 times original parliament)

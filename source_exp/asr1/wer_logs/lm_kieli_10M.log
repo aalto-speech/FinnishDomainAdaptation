@@ -1,0 +1,25 @@
+make a non-linguistic symbol list
+[fil]
+[int]
+[spk]
+make a dictionary
+64 data/lang_1char/kielipankki_10M_lm.txt
+Done
+stage 3: LM Preparation
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_kielipankki_10M_lm/result.txt
+|   SPKR                                             |   # Snt      # Wrd    |   Corr        Sub         Del        Ins         Err      S.Err    |
+|   Sum/Avg                                          |   2850      293409    |   96.9        1.4         1.7        1.4         4.5       60.2    |
+write a WER result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_kielipankki_10M_lm/result.wrd.txt
+|   SPKR                                             |   # Snt      # Wrd    |   Corr          Sub         Del         Ins         Err       S.Err    |
+|   Sum/Avg                                          |   2850       35070    |   86.1         11.6         2.3         2.4        16.3        58.1    |
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_kielipankki_10M_lm/result.txt
+|   SPKR                                             |   # Snt      # Wrd    |   Corr         Sub        Del         Ins         Err      S.Err    |
+|   Sum/Avg                                          |   3006      303312    |   97.0         1.2        1.8         1.2         4.1       59.4    |
+write a WER result in exp/all_cleaned_pytorch_train_large_transformer_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_kielipankki_10M_lm/result.wrd.txt
+|   SPKR                                             |   # Snt       # Wrd    |   Corr         Sub         Del          Ins         Err       S.Err    |
+|   Sum/Avg                                          |   3006        36869    |   86.7        10.6         2.6          1.9        15.2        57.6    |
+Finished

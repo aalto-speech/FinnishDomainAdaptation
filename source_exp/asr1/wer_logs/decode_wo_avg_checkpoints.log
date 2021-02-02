@@ -1,0 +1,16 @@
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding without avg checkpoints, with LM 2048 unit and decode beam size 40
+write a CER (or TER) result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+|  SPKR                                           |  # Snt    # Wrd   |  Corr      Sub      Del      Ins       Err    S.Err  |
+|  Sum/Avg                                        |  3006    303312   |  95.2      2.0      2.8      1.7       6.5     77.8  |
+write a WER result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|  SPKR                                            |  # Snt    # Wrd  |  Corr       Sub       Del       Ins      Err     S.Err   |
+|  Sum/Avg                                         |  3006     36869  |  78.5      17.8       3.7       3.7     25.2      74.8   |
+write a CER (or TER) result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+|  SPKR                                           |  # Snt    # Wrd  |  Corr      Sub       Del      Ins      Err    S.Err  |
+|  Sum/Avg                                        |  2850    293409  |  95.3      2.2       2.5      2.0      6.8     78.1  |
+write a WER result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|  SPKR                                            |  # Snt   # Wrd   |  Corr       Sub      Del       Ins       Err    S.Err   |
+|  Sum/Avg                                         |  2850    35070   |  78.1      18.7      3.1       4.5      26.4     75.4   |
+Finished

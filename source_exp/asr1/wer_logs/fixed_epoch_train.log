@@ -1,0 +1,52 @@
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 4: Network Training
+Training done
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with large LM 2048 unit and beam size 40
+average over ['exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.5', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.6', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.7', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.8', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.9', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.10', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.14']
+/scratch/work/choudhs1/espnet/egs/swati_finnish_yle/asr1/./run.sh: 2 background jobs are failed.
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with large LM 2048 unit and beam size 40
+average over ['exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.5', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.6', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.7', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.8', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.9', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.10', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/snapshot.ep.14']
+write a CER (or TER) result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048/result.txt
+|  SPKR                                           | # Snt    # Wrd  |  Corr     Sub      Del      Ins     Err    S.Err  |
+|  Sum/Avg                                        | 2850    293409  |  95.3     2.2      2.5      2.0     6.8     78.1  |
+write a WER result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048/result.wrd.txt
+|  SPKR                                           |  # Snt   # Wrd   |  Corr      Sub      Del      Ins       Err    S.Err  |
+|  Sum/Avg                                        |  2850    35070   |  78.1     18.7      3.1      4.5      26.4     75.4  |
+
+
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with large LM 2048 unit and beam size 40
+write a CER (or TER) result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048/result.txt
+|  SPKR                                           |  # Snt   # Wrd  |  Corr      Sub      Del     Ins      Err    S.Err  |
+|  Sum/Avg                                        |  2912   291774  |  95.3      2.0      2.7     1.7      6.4     77.6  |
+write a WER result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048/result.wrd.txt
+|  SPKR                                           |  # Snt    # Wrd  |  Corr      Sub       Del      Ins      Err     S.Err  |
+|  Sum/Avg                                        |  2912     35370  |  78.7     17.7       3.6      3.7     25.0      74.6  |
+Finished
+stage 8: Model parameters
+exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35626628
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_large_lm_2048/rnnlm.model.best
+Trainable parameters:  67412034
+Length vocabulary:  66
+write a CER (or TER) result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048/result.txt
+|  SPKR                                           |  # Snt   # Wrd  |  Corr      Sub      Del     Ins      Err    S.Err  |
+|  Sum/Avg                                        |  3006   303312  |  95.2      2.0      2.8     1.7      6.5     77.8  |
+write a WER result in exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048/result.wrd.txt
+|  SPKR                                           |  # Snt    # Wrd  |  Corr      Sub       Del      Ins      Err     S.Err  |
+|  Sum/Avg                                        |  3006     36869  |  78.5     17.8       3.7      3.7     25.2      74.8  |
+Finished
+stage 8: Model parameters
+exp/all_cleaned_pytorch_fixed_epoch_train_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35626628
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_large_lm_2048/rnnlm.model.best
+Trainable parameters:  67412034
+Length vocabulary:  66

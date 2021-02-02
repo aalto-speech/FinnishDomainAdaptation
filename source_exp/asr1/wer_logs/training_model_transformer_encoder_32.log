@@ -1,0 +1,26 @@
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 4: Network Training
+Training done
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.9', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.10', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.18']
+/scratch/work/choudhs1/espnet/egs/swati_finnish_yle/asr1/./run.sh: 2 background jobs are failed.
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.9', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.10', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_transformer_32/results/snapshot.ep.18']
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_transformer_32/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+| SPKR                                           | # Snt   # Wrd  | Corr     Sub    Del     Ins     Err   S.Err  |
+| Sum/Avg                                        | 2850   293409  | 96.1     1.9    1.9     2.1     5.9    72.7  |
+write a WER result in exp/all_cleaned_pytorch_train_transformer_32/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+| SPKR                                           |  # Snt  # Wrd  |  Corr     Sub      Del     Ins      Err   S.Err  |
+| Sum/Avg                                        |  2850   35070  |  81.1    16.4      2.5     4.3     23.1    70.3  |
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_transformer_32/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+| SPKR                                           | # Snt   # Wrd  | Corr     Sub     Del     Ins     Err   S.Err  |
+| Sum/Avg                                        | 3006   303312  | 96.2     1.7     2.1     1.8     5.6    73.1  |
+write a WER result in exp/all_cleaned_pytorch_train_transformer_32/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|  SPKR                                           | # Snt   # Wrd  | Corr      Sub     Del      Ins     Err    S.Err  |
+|  Sum/Avg                                        | 3006    36869  | 81.5     15.5     3.0      3.6    22.1     70.8  |
+Finished

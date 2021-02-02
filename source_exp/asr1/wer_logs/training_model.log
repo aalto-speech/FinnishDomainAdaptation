@@ -1,0 +1,44 @@
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 4: Network Training
+Training done
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.18', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.19', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.20']
+/scratch/work/choudhs1/espnet/egs/swati_finnish_yle/asr1/./run.sh: 2 background jobs are failed.
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.18', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.19', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.20']
+/scratch/work/choudhs1/espnet/egs/swati_finnish_yle/asr1/./run.sh: 2 background jobs are failed.
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.18', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.19', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.20']
+/scratch/work/choudhs1/espnet/egs/swati_finnish_yle/asr1/./run.sh: 2 background jobs are failed.
+dictionary: data/lang_1char/all_cleaned_units.txt
+Directories created
+stage 5: Decoding with avg checkpoints, with LM 2048 unit and decode beam size 40
+average over ['exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.11', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.12', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.13', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.14', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.15', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.16', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.17', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.18', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.19', 'exp/all_cleaned_pytorch_train_retrained_transformer_model/results/snapshot.ep.20']
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+|  SPKR                                           |  # Snt     # Wrd  |  Corr      Sub       Del      Ins      Err     S.Err  |
+|  Sum/Avg                                        |  2850     293409  |  95.9      2.0       2.1      2.1      6.2      76.2  |
+write a WER result in exp/all_cleaned_pytorch_train_retrained_transformer_model/decode_yle-dev-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|  SPKR                                            |  # Snt    # Wrd   |  Corr       Sub      Del       Ins       Err     S.Err   |
+|  Sum/Avg                                         |  2850     35070   |  80.1      17.3      2.6       4.8      24.7      73.1   |
+write a CER (or TER) result in exp/all_cleaned_pytorch_train_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.txt
+|  SPKR                                           |  # Snt     # Wrd  |  Corr       Sub      Del       Ins      Err     S.Err  |
+|  Sum/Avg                                        |  3006     303312  |  95.9       1.8      2.3       1.8      5.9      75.7  |
+write a WER result in exp/all_cleaned_pytorch_train_retrained_transformer_model/decode_yle-test-new_decode_beam_40_lm5_ctc3_lm_unit_2048_avg/result.wrd.txt
+|  SPKR                                            |  # Snt    # Wrd   |  Corr       Sub       Del       Ins       Err     S.Err   |
+|  Sum/Avg                                         |  3006     36869   |  80.5      16.5       3.0       4.0      23.5      72.5   |
+Finished
+stage 8: Model parameters
+exp/all_cleaned_pytorch_train_no_preprocess/results/model.last10.avg.best
+Trainable parameters:  35626628
+stage 9: Language model parameters
+exp/train_rnnlm_pytorch_large_lm_2048/rnnlm.model.best
+Trainable parameters:  67412034
+Length vocabulary:  66
